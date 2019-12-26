@@ -1,0 +1,112 @@
+# -*- coding: utf-8 -*-
+import sys, threading, time
+from PyQt5.QtWidgets
+from PyQt5.QtWidgets import uic
+from PyQt5.QtCore import QCoreApplication 
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class MainWindow(QMainWindow):
+    MainWindow = uic.loadUi("design1.ui", self)
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+        
+    def unitUi(self):
+        self.resize(250, 150)
+        self.center()
+        self.setWindowTitle('Center') 
+        self.show()        
+        
+    def center(self):
+        qr = self.frameGeometry()
+        cp = QDesktopWidget().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())
+        
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("design1.ui", self)
+        self.initUI()
+                
+    def initUI(self):
+                self.a=''
+                lbl1 = QLabel(label, self)
+                lbl1.move(85, 10)
+            self.label.setText(question)
+            self.answer=correct[[n]]
+            self.lbl3 = QLabel()
+            self.lbl3.move(85, 20)
+            self.lbl3 = QLabel()
+            self.lbl3.move(85, 30)
+            self.pushButton.clicked.connect(self.On_Click1)
+            self.pushButton_2.clicked.connect(self.On_Click2)
+            self.show()
+       
+     def center(self):
+                qr = self.frameGeometry()
+                cp = QDesktopWidget().availableGeometry().center()
+                qr.moveCenter(cp)
+                self.move(qr.topLeft())
+                 
+class Dialog(QDialog): 
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("design3.ui", self)
+        self.initUI()
+
+    def initUI(self):
+        self.qbtn2 = QPushButton('pushButton', self)
+        self.qbtn2.clicked.connect(self.forward)
+        self.qbtn2.resize(self.qbtn2.sizeHint())
+        self.qbtn2.move(250, 300)
+        self.qbtn2.setStyleSheet("background-color: Blue")
+        self.setWindowFlags(self.windowFlags() | QtCore.Qt.WindowStaysOnTopHint)
+        self.show() 
+    def center(self):
+        qr = self.frameGeometry()
+        cp = QDesktopWidget().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())
+         
+class Dialog(QDialog): 
+        def __init__(self):
+            super().__init__()
+            uic.loadUi("design2.ui", self)
+            self.initUI()
+
+        def initUI(self):
+            self.qbtn2 = QPushButton('pushButton', self)
+            self.qbtn2.clicked.connect(self.forward)
+            self.qbtn2.resize(self.qbtn2.sizeHint())
+            self.qbtn2.move(250, 300)
+            self.qbtn2.setStyleSheet("background-color: Blue")
+            self.setWindowFlags(self.windowFlags() | QtCore.Qt.WindowStaysOnTopHint)
+            self.show() 
+            
+        def center(self):
+            qr = self.frameGeometry()
+            cp = QDesktopWidget().availableGeometry().center()
+            qr.moveCenter(cp)
+            self.move(qr.topLeft())
+            
+            
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    ex = Main() 
+    ex.show() 
+    sys.exit(app.exec())
+    
+          
+      
+        
+        
+        
+        
+          
+       
+       
+       
+       
+
+
+
